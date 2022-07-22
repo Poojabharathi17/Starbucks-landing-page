@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Landing page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="logo.png.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="">Home</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">What's new</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textbox">
+                <h2>It's not just Coffee <br>It's <span>Starbucks</span></h2>
+            <p>It's one of the most successful companies in the world, not only in the coffee shop business. It is so successful because it was able to provide an experience that changed how much of the world thought about coffee shops and how many of us drink coffee outside of our homes.</p>
+            <a href="#">Learn More</a>
+        </div>
+            <div class="imgBox">
+                <img src="img1.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="thumb1.png" onclick="imgSlider('img1.png');changeCircleColor('#017143')"></li>
+            <li><img src="thumb2.png" onclick="imgSlider('img2.png');changeCircleColor('#eb7495')" height="70"></li>
+            <li><img src="thumb3.png" onclick="imgSlider('img3.png');changeCircleColor('#d752b1')"height="80"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="https://www.facebook.com/Starbucks/"><img src="facebook.png"></a></li>
+            <li><a href="https://twitter.com/Starbucks?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="twitter.png"></a></li>
+            <li><a href="https://www.instagram.com/starbucks/?hl=en"><img src="instagram.png"></a></li>
+        </ul>
+    </section>
+
+    <script src="main.js">
+    </script>
+</body>
+</html>
