@@ -44,8 +44,7 @@ header ul li a{
     text-decoration: none;
 }
 .content{
-    position: relative;
-    width: 100%;
+    width: 100%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -85,6 +84,7 @@ header ul li a{
     justify-content: flex-end;
     padding-right: 50px;
     margin-top: 50px;
+    z-index: 3;
 }
 .imgBox img{
     max-width: 200px;
@@ -109,30 +109,11 @@ header ul li a{
 .thumb li img{
     max-width: 50px;
 }
-.sci{
-    position: absolute;
-    top: 50%;
-    right: 30px;
-    transform: translateY(-50px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.thumb li :nth-child(3){
+    transform: rotate(90deg);
 }
-.sci li{
-    list-style: none;
-}
-.sci li a{
-    display: inline-block;
-    margin: 5px 0;
-    transform: scale(0.6);
-    filter: invert(1);
-}
-.sci img{
-    border-radius: 80%;
-    width: 30px;
-    object-fit: contain;
-}
+
+
 .circle{
     position: absolute;
     top: 0;
@@ -142,6 +123,101 @@ header ul li a{
     background: #017143;
     clip-path: circle(550px at right 800px);
 }
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    background: #ebdbc8;
+    gap: 1.5rem;
+    height: 150%;
+  }
+  .about-img img{
+    display: inline-block;
+    margin-right: 10px;
+
+  }
+  h2{
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
+  p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 1.3em;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: light green;
+  }
+  .social a {
+    font-size: 27px;
+    margin: 0.5rem;
+  }
+  .contact .social a img .fb{
+    padding: 5px;
+    color: #fff;
+    background: #000000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+  .contact .social a img .tw{
+    padding: 5px;
+    color: #fff;
+    background: #000000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+  .contact .social a .img .insta{
+    padding: 5px;
+    color: #fff;
+    background: #000000;
+    border-radius: 80%;
+    width: 10px;
+    height: 10px;
+  }
+  .contact .social a img .ut{
+    padding: 5px;
+    color: #fff;
+    background: #000000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+  .social a .bx:hover {
+    background: var(--main-color);
+  }
+  .links {
+    margin: 1rem 0 1rem;
+  }
+  .links a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--second-color);
+    padding: 1rem;
+  }
+  .links a:hover {
+    color: var(--main-color);
+  }
+  .contact p {
+    text-align: center;
+  }
+  .contact .con{
+    text-align: center;
+    font-size: 1.2rem;
+    text-decoration: underline;
+  }
+
 @media (max-width: 991px)
 {
     header{
@@ -155,8 +231,8 @@ header ul li a{
     }
     .toggle{
         position: relative;
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
         cursor: pointer;
         background: url(menu.png);
         background-size: 40px;
@@ -191,24 +267,30 @@ header ul li a{
     }
     section{
         padding: 20px 20px 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     .content{
         flex-direction: column;
-        margin-top: 100px;
+        margin-top: 80px;
+        width: 100%;
+    }
+    .content .textBox{
+        font-size: 10px;
+        width: 100%;
     }
     .content .textBox h2{
         font-size: 2.5em;
         margin-bottom: 15px;
     }
-    .content .textBox{
-        max-width: 100%;
-    }
-    .content .imgBox{
+    .imgBox{
         max-width: 100%;
         justify-content: center;
     }
-    .content .imgBox img{
+    .imgBox img{
         max-width: 300px;
+        
     }
     .thumb li img{
         max-width: 40px;
@@ -216,12 +298,31 @@ header ul li a{
     .circle{
         clip-path: circle(300px at center bottom);
     }
-    .sci{
-        background: #017143;
-        right: 0;
-        width: 30px;
-        height: 130px;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
+    section .sci li .fb{
+       position: absolute;
+       top: 340px;
+       left: 445px;
+       width: 30px;
+       height: 30px;
     }
+    section .sci li{
+        list-style: none;
+    }
+    section .sci li .tw{
+        position: absolute;
+        top: 385px;
+        left: 450px;
+        width: 25px;
+        height: 25px;
+     }
+     section .sci li .insta{
+        position: absolute;
+        top: 425px;
+        left: 450px;
+        width: 25px;
+        height: 25px;
+     }
 }
+
+  
+
