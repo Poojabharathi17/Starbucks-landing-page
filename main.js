@@ -23,3 +23,9 @@ window.onscroll = () => {
     menu.classList.remove('bx-x');
     navbar.classList.remove('active');
 }
+var nav = document.querySelector('header ul.navigation.active');
+var close = document.querySelector('.navigation');
+nav.onclick=function()
+{
+    nav.classList.toggle("close");
+}
