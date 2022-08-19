@@ -5,6 +5,9 @@
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 section{
     position: relative;
     width: 100%;
@@ -125,7 +128,7 @@ header ul li a{
 }
 .about {
     display: flex;
-    flex-wrap: wrap;
+   
     background: #ebdbc8;
     gap: 1.5rem;
     height: 150%;
@@ -156,7 +159,8 @@ header ul li a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: light green;
+    background-color: white;
+    padding: 0;
   }
   .social a {
     font-size: 27px;
@@ -198,7 +202,7 @@ header ul li a{
     background: var(--main-color);
   }
   .links {
-    margin: 1rem 0 1rem;
+    margin-bottom: 0;
   }
   .links a {
     font-size: 1rem;
@@ -241,7 +245,7 @@ header ul li a{
         z-index: 11;
     }
     .toggle.active{
-        position: fixed;
+        position: absolute;
         right: 20px;
         background: url(close.png);
         background-size: 15px;
@@ -249,11 +253,12 @@ header ul li a{
         background-position: center;
     }
     header ul.navigation.active{
-        position: fixed;
+       
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -261,6 +266,10 @@ header ul li a{
         background-color: #fff;
         z-index: 10;
     }
+    .close{
+        display: none;
+    }
+
     header ul li a{
         font-size: 1.5em;
         margin: 5px 0;
@@ -322,6 +331,31 @@ header ul li a{
         width: 25px;
         height: 25px;
      }
+     .about-img img{
+        width: 100%;
+        margin-bottom: 40px;
+        margin-top: 40px;
+        height: fit-content;
+     }
+    
+     .about-text{
+        font-size: small;
+        padding-top: 0;
+     }
+     section.contact{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+     }
+     .contact .links{
+      margin: 0;
+     }
+
+     .contact .copyright{
+       margin-bottom: 0;
+     }
+
 }
 
   
